@@ -15,6 +15,7 @@ export default function MessageImage({
   return (
     <View style={[styles.container, containerStyle]}>
       <Lightbox
+        springConfig={{ tension: 900000, friction: 900000 }}
         activeProps={{
           style: styles.imageActive,
         }}
