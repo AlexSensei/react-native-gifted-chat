@@ -19,6 +19,11 @@ export default function MessageImage({
         activeProps={{
           style: styles.imageActive,
         }}
+        renderHeader={close => (
+          <TouchableOpacity onPress={close}>
+            <Text style={styles.closeButton}>×</Text>
+          </TouchableOpacity>
+        )}
         {...lightboxProps}
       >
         <Image
@@ -44,6 +49,22 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'contain',
   },
+  closeButton: {
+    fontSize: 35,
+    color: 'white',
+    lineHeight: 60,
+    width: 60,
+    textAlign: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowRadius: 1.5,
+    shadowColor: 'black',
+    shadowOpacity: 0.8,
+    paddingVertical: 10,
+    paddingHorizontal: 10
+  }
 });
 
 MessageImage.defaultProps = {
