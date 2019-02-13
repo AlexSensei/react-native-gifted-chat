@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Image, StyleSheet, View, ViewPropTypes } from 'react-native';
+import { Image, StyleSheet, View, ViewPropTypes, TouchableOpacity, Text } from 'react-native';
 import Lightbox from 'react-native-lightbox';
 
 export default function MessageImage({
